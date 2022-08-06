@@ -18,4 +18,14 @@
     body {
         scroll-behavior: smooth;
     }
+
+    li {
+        cursor: pointer;
+    }
+}
+
+@layer components {
+    .seperate {
+        @apply border-t-8 border-border_color;
+    }
 }
