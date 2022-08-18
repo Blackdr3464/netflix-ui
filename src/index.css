@@ -17,6 +17,7 @@
     html,
     body {
         scroll-behavior: smooth;
+        background-color: #000;
     }
 
     li {
@@ -27,5 +28,16 @@
 @layer components {
     .seperate {
         @apply border-t-8 border-border_color;
+    }
+}
+
+@layer utilities {
+    .text_clamp {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        line-height: 1.8;
+        -webkit-line-clamp: 3;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
     }
 }

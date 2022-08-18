@@ -1,5 +1,6 @@
 import React from 'react';
 import { AiOutlinePlus } from 'react-icons/ai';
+import { Link } from 'react-router-dom';
 import Banner from '../../../assets/images/banner.jpg';
 import Logo from '../../../assets/images/logo.png';
 import Footer from '../../../components/Footer';
@@ -10,20 +11,23 @@ import { Intro, MailForm } from '../../elements';
 const StartPage = () => {
     return (
         <div className='w-full h-full '>
-            <div className='w-full h-screen'>
-                <header className='h-[88px] flex items-center justify-between px-14'>
+            <div className='w-full h-screen relative'>
+                <header className='h-[88px] flex items-center justify-between px-14 relative z-10'>
                     <img src={Logo} alt='logo' className='w-[134px]' />
                     <div className=' flex gap-8'>
                         <select className='relative border border-white py-1 bg-grayOver text-white '>
                             <option value='English'>English</option>
                             <option value='Tiếng Việt'>Tiếng Việt</option>
                         </select>
-                        <button className='text-base text-white px-4 py-[6px] bg-red-600 rounded'>
+                        <Link
+                            to='/login'
+                            className='text-base text-white px-4 py-[6px] bg-red-600 rounded'
+                        >
                             Sign In
-                        </button>
+                        </Link>
                     </div>
                 </header>
-                <div className='absolute top-0 right-0 left-0 h-full -z-40'>
+                <div className='absolute top-0 right-0 left-0 h-full z-0'>
                     <img
                         src={Banner}
                         alt=''
@@ -31,7 +35,7 @@ const StartPage = () => {
                     />
                     <div className='absolute top-0 right-0 left-0 bg-overlayBg z-10 w-full h-full'></div>
                 </div>
-                <div className='w-[640px] text-white flex flex-col items-center justify-center gap-5 mx-auto text-center mt-[116px]'>
+                <div className='w-[640px] text-white flex flex-col items-center justify-center gap-5 mx-auto text-center mt-[116px] relative z-10'>
                     <h1 className='text-[50px] font-semibold leading-tight'>
                         Unlimited movies, TV shows, and more.
                     </h1>
@@ -58,7 +62,7 @@ const StartPage = () => {
                 />
             ))}
 
-            <div className='w-full h-full bg-black text-white seperate'>
+            <div className='w-full h-full text-white seperate'>
                 <div className='max-w-[1100px] mx-auto py-[70px]'>
                     <h1 className='text-[50px] font-semibold text-center'>
                         Frequently Asked Questions
