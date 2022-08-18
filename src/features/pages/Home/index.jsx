@@ -95,7 +95,7 @@ const Home = () => {
                 />
                 <div className='absolute top-2/4 -translate-y-[68%] left-14 w-[485px] flex flex-col gap-5'>
                     <img
-                        src='https://occ-0-325-58.1.nflxso.net/dnm/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABfhx5oVcgj4ZIkzTxa8s4l5hCgT0BnEgHz2Kc7qafpvfZU2Nkya-qAWqxt-rv8oAPQs64RJCdjRnKep6-EVetUm_tK9-1jCpG841.webp?r=5ce'
+                        src='https://occ-0-325-58.1.nflxso.net/dnm/api/v6/tx1O544a9T7n8Z_G12qaboulQQE/AAAABZEPymuXsMGE4IasZSKgXr1XNEhcyb9X3Gk6d0lwSIss4u8R9mSWkMzhuJos4_HlGRPV9HlQIHwx2cHOBxS8dbYaY-pdoORHdNs6us6zyYs.webp?r=f07'
                         alt=''
                         className='max-h-[206px]'
                     />
