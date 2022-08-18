@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 import Avt from '../../../assets/images/avt.png';
 import Logo from '../../../assets/images/logo.png';
 import Naruto from '../../../assets/images/naruto.webp';
-import NarutoLogo from '../../../assets/images/narutoLogo.webp';
+// import NarutoLogo from '../../../assets/images/narutoLogo.webp';
 import dataNavbar from '../../../data/dataNavbar';
 
 import axios from 'axios';
@@ -94,7 +94,11 @@ const Home = () => {
                     className='object-cover w-full h-full'
                 />
                 <div className='absolute top-2/4 -translate-y-[68%] left-14 w-[485px] flex flex-col gap-5'>
-                    <img src={NarutoLogo} alt='' className='max-h-[206px]' />
+                    <img
+                        src='https://occ-0-325-58.1.nflxso.net/dnm/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABfhx5oVcgj4ZIkzTxa8s4l5hCgT0BnEgHz2Kc7qafpvfZU2Nkya-qAWqxt-rv8oAPQs64RJCdjRnKep6-EVetUm_tK9-1jCpG841.webp?r=5ce'
+                        alt=''
+                        className='max-h-[206px]'
+                    />
                     <p className='text-base text-white'>
                         After training abroad for more than two years, Naruto
                         Uzumaki returns to his hometown and teams up with Haruno
