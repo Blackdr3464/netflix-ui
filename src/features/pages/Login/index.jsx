@@ -1,9 +1,36 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Logo from '../../../assets/images/logo.png';
 import Footer from '../../../components/Footer';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import axios from 'axios';
+import Loading from '../../elements/Loading';
 
 const Login = () => {
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [loading, setLoading] = useState(false);
+
+    const navigate = useNavigate();
+
+    const handleLogin = async () => {
+        setLoading(true);
+        try {
+            const user = await axios.post(
+                'http://localhost:8000/v1/auth/login',
+                {
+                    email: email,
+                    password: password,
+                }
+            );
+            if (user) {
+                navigate('/member');
+            }
+        } catch (error) {
+            alert(error.message);
+            setLoading(false);
+        }
+    };
+
     return (
         <div className='bg-banner bg-no-repeat w-full h-auto bg-cover'>
             <Link to='/' className='h-[90px] px-10 flex items-center'>
@@ -16,22 +43,25 @@ const Login = () => {
                 <div className='flex flex-col gap-4 mb-4'>
                     <input
                         className='w-full h-[50px] px-5 rounded'
-                        type='text'
+                        type='email'
                         placeholder='Email or phone number'
+                        onChange={(e) => setEmail(e.target.value)}
                     />
                     <input
                         className='w-full h-[50px] px-5 rounded'
                         type='password'
                         placeholder='Password'
+                        onChange={(e) => setPassword(e.target.value)}
                     />
                 </div>
                 <div className=''>
-                    <Link
+                    <button
+                        onClick={handleLogin}
                         to='/member'
                         className='flex items-center justify-center w-full py-3 bg-red-600 rounded text-white text-base font-medium mt-6 mb-4'
                     >
-                        Sign In
-                    </Link>
+                        {loading ? <Loading /> : 'Sign In'}
+                    </button>
                     <div className='text-[13px] text-text_gray flex items-center justify-between '>
                         <label className='flex items-center gap-1'>
                             <input type='checkbox' />

@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion';
 import React, { useEffect, useState } from 'react';
 import { AiFillCaretDown } from 'react-icons/ai';
 import { BiSearch } from 'react-icons/bi';
@@ -9,15 +8,14 @@ import { Link } from 'react-router-dom';
 import Avt from '../../../assets/images/avt.png';
 import Logo from '../../../assets/images/logo.png';
 import Naruto from '../../../assets/images/naruto.webp';
-// import NarutoLogo from '../../../assets/images/narutoLogo.webp';
 import dataNavbar from '../../../data/dataNavbar';
 
 import axios from 'axios';
+import { useDispatch, useSelector } from 'react-redux';
 import Footer from '../../../components/Footer';
-import ListFilm from '../../elements/ListFilm';
-import { useSelector, useDispatch } from 'react-redux';
-import { listFilm } from '../../../redux/actions/film';
 import Overlay from '../../../components/Overlay';
+import { listFilm } from '../../../redux/actions/film';
+import ListFilm from '../../elements/ListFilm';
 
 const Home = () => {
     const [showBg, setShowBg] = useState(false);
@@ -120,6 +118,36 @@ const Home = () => {
                 <ListFilm
                     data={dataFilm}
                     title='Phim Mới Cập Nhật'
+                    onClickInfor={handleClickInfor}
+                />
+                <ListFilm
+                    data={dataFilm}
+                    title='Phim Hài Hước'
+                    onClickInfor={handleClickInfor}
+                />
+                <ListFilm
+                    data={dataFilm}
+                    title='Phim Kinh Dị'
+                    onClickInfor={handleClickInfor}
+                />
+                <ListFilm
+                    data={dataFilm}
+                    title='Phim Hàn Quốc'
+                    onClickInfor={handleClickInfor}
+                />
+                <ListFilm
+                    data={dataFilm}
+                    title='Phim Hoạt Hình'
+                    onClickInfor={handleClickInfor}
+                />
+                <ListFilm
+                    data={dataFilm}
+                    title='Phim Siêu Nhân'
+                    onClickInfor={handleClickInfor}
+                />
+                <ListFilm
+                    data={dataFilm}
+                    title='Phim Holyhood'
                     onClickInfor={handleClickInfor}
                 />
             </div>
