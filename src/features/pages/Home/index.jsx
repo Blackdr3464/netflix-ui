@@ -37,7 +37,7 @@ const Home = () => {
             const res = await axios.get(
                 `https://ophim1.com/danh-sach/phim-moi-cap-nhat?page=1`
             );
-            res.data.items.forEach(async (item) => {
+            await res.data.items.forEach(async (item) => {
                 const resFilm = await axios.get(
                     `https://ophim1.com/phim/${item.slug}`
                 );

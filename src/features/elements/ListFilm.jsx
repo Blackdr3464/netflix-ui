@@ -7,7 +7,9 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 
 const ListFilm = ({ data, title, onClickInfor }) => {
     const handleClickInfor = (item) => {
-        onClickInfor(item);
+        if (handleClickInfor) {
+            onClickInfor(item);
+        }
     };
     return (
         <div className='px-14'>

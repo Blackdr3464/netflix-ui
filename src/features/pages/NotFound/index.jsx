@@ -6,7 +6,7 @@ const NotFound = () => {
     return (
         <div className='w-screen h-screen bg-notfound bg-fixed bg-no-repeat bg-center bg-cover'>
             <header className='w-full bg-black h-[68px] px-[40px] flex items-center'>
-                <Link to='/'>
+                <Link to='/home'>
                     <img
                         src={Logo}
                         alt='logo'
@@ -24,7 +24,7 @@ const NotFound = () => {
                         explore on the home page.
                     </p>
                     <Link
-                        to='/'
+                        to='/home'
                         className='relative md:text-base text-xs text-black font-medium bg-white px-5 py-2 rounded hover:bg-slate-200 after:content after:absolute after:shadow-30xl after:-z-40'
                     >
                         Netflix Home
