@@ -17,7 +17,7 @@ const MailForm = () => {
         try {
             setLoading(true);
             const register = await axios.post(
-                'http://localhost:8000/v1/auth/register',
+                'https://netflix-appa.herokuapp.com/v1/auth/register',
                 {
                     email: email,
                     password: password,

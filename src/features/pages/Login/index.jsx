@@ -16,7 +16,7 @@ const Login = () => {
         setLoading(true);
         try {
             const user = await axios.post(
-                'http://localhost:8000/v1/auth/login',
+                'https://netflix-appa.herokuapp.com/v1/auth/login',
                 {
                     email: email,
                     password: password,
